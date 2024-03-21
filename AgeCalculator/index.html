@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h2, h3{
+            color: blueviolet;
+        }
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Calculate Age from Date of Birth</h2>
+        <b>Enter Date of Birth: <input type="date"  id="DOB"></b>
+        <span id="message" style="color:red;"></span>
+        <br><br>
+        <button type="submit" onclick="ageCalculator()">Calculate Age</button>
+        <h3 id="result"></h3>
+        <script>
+            function ageCalculator(){
+                let userinput = document.getElementById('DOB').value;
+                let dob = new Date(userinput);
+                if(userinput==null || userinput == ''){
+                    document.getElementById('message').innerHTML = "Select a date please!";
+                    return false
+                }else{
+                    let month_diff = Date.now()-dob.getTime();
+                    let age_dt = new Date(month_diff);
+                    let year = age_dt.getUTCFullYear();
+                    let age = Math.abs(year - 1970);
+                    return document.getElementById("result").innerHTML = "Age is " + age + " year";
+                }
+            }
+        </script>
+        
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- import React, { useState } from 'react';
+
+        function AgeCalculator() {
+          const [dob, setDob] = useState('');
+          const [age, setAge] = useState('');
+        
+          const calculateAge = () => {
+            if (!dob) {
+              alert('Please select a date of birth.');
+              return;
+            }
+        
+            const dobDate = new Date(dob);
+            const today = new Date();
+            const ageDiff = today - dobDate;
+            const ageDate = new Date(ageDiff);
+        
+            let years = Math.abs(ageDate.getUTCFullYear() - 1970);
+        
+            setAge(`${years} years`);
+          };
+        
+          return (
+            <div>
+              <h1>Date of Birth Calculator</h1>
+              <label htmlFor="dob">Date of Birth:</label>
+              <input
+                type="date"
+                id="dob"
+                value={dob}
+                onChange={(e) => setDob(e.target.value)}
+              />
+              <button onClick={calculateAge}>Calculate Age</button>
+              {age && <p>Age is {age}</p>}
+            </div>
+          );
+        }
+        
+        export default AgeCalculator; -->
